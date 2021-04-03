@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <link rel="stylesheet" href="/fontawesome-5.14.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercício 10 - Caixa Branca</title>
+    
+
+    <script>
+        function conversao() {
+            var tipo1 = document.getElementById("moeda1").value;
+            var tipo2 = document.getElementById("moeda2").value;
+
+            if (tipo1 == "real" && tipo2 == "dolar") {
+
+                var real = parseInt(document.getElementById("vMoeda").value);
+                var dolar = 5.58;
+
+                var resultado = parseFloat(real / dolar).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "real" && tipo2 == "euro") {
+                var real = parseInt(document.getElementById("vMoeda").value);
+                var euro = 6.73;
+
+                var resultado = parseFloat(real / euro).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "real" && tipo2 == "peso") {
+                var real = parseInt(document.getElementById("vMoeda").value);
+                var peso = 0.062;
+
+                var resultado = parseFloat(real / peso).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "dolar" && tipo2 == "real") {
+                var dolar = parseInt(document.getElementById("vMoeda").value);
+                var real = 5.58;
+
+                var resultado = parseFloat(dolar * real).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "dolar" && tipo2 == "euro") {
+                var dolar = parseInt(document.getElementById("vMoeda").value);
+                var euro = 0.83;
+
+                var resultado = parseFloat(dolar * euro).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "dolar" && tipo2 == "peso") {
+                var dolar = parseInt(document.getElementById("vMoeda").value);
+                var peso = 89.82;
+
+                var resultado = parseFloat(dolar * peso).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "euro" && tipo2 == "dolar") {
+                var euro = parseInt(document.getElementById("vMoeda").value);
+                var dolar = 1.21;
+
+                var resultado = parseFloat(euro * dolar).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "euro" && tipo2 == "real") {
+                var euro = parseInt(document.getElementById("vMoeda").value);
+                var real = 6.75;
+
+                var resultado = parseFloat(euro * real).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "euro" && tipo2 == "peso") {
+                var euro = parseInt(document.getElementById("vMoeda").value);
+                var peso = 108.50;
+
+                var resultado = parseFloat(euro * peso).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "peso" && tipo2 == "euro") {
+                var peso = parseInt(document.getElementById("vMoeda").value);
+                var euro = 0.040;
+
+                var resultado = parseFloat(peso * euro).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "peso" && tipo2 == "dolar") {
+                var peso = parseInt(document.getElementById("vMoeda").value);
+                var dolar = 0.011;
+
+                var resultado = parseFloat(peso * dolar).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else if (tipo1 == "peso" && tipo2 == "real") {
+                var peso = parseInt(document.getElementById("vMoeda").value);
+                var real = 0.062;
+
+                var resultado = parseFloat(peso * real).toFixed(2);
+
+                document.getElementById("resultado").value = resultado;
+            } else {
+                alert("Cambio invalido!")
+            }
+
+        }
+    </script>
+
+    <style>
+        .container {
+            width: 340px;
+            height: 320px;
+            background-color: rgb(245, 245, 245);
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            margin-top: 15%;
+
+        }
+
+        .container-inside {
+            display: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            background-color: #44c767;
+            border-radius: 5px;
+            border: 1px solid #18ab29;
+            color: #ffffff;
+            font-family: arial;
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            height: 38px;
+            /*line-height: 40px;*/
+            width: 140px;
+            text-decoration: none;
+            text-align: center;
+            margin-left: 65px;
+
+        }
+
+        .button:hover {
+            background-color: #30ad51;
+        }
+
+        .css-input {
+            padding: 5px;
+            font-size: 16px;
+            border-width: 1px;
+            border-color: #ffffff;
+            background-color: #FFFFFF;
+            color: #000000;
+            border-style: solid;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .css-input:focus {
+            outline: none;
+        }
+
+        .baixo {
+            margin-bottom: 10px;
+        }
+
+        .titulo {
+            text-align: center;
+            font-family: arial;
+            font-size: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .select {
+            width: 58px;
+            height: 30px;
+            border-radius: 5px;
+            margin-right: 4px;
+            border: 1px solid #18ab29;
+            background-color: #44c767;
+            color: white;
+            font-family: arial;
+            font-weight: bold;
+
+        }
+
+        .select:hover{
+            background-color: #30ad51;
+
+        }
+
+        div div select option{
+            text-align: center;
+            color: white;
+            font-family: arial;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .inspiration{
+            text-align: center;
+            font-family: arial;
+            font-size: 15px;
+            font-weight: bold;
+            font-size: 15px;
+            color: #a1a1a1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-inside">
+
+            <p class="titulo">Moeda</p>
+            <select id="moeda1" class="select">
+                <option value="real">Real</option>
+                <option value="dolar">Dolár</option>
+                <option value="euro">Euro</option>
+                <option value="peso">Peso</option>
+            </select>
+
+            <input id="vMoeda" type="number" class="css-input"><br><br>
+            <button onclick="conversao()" class="button">Calcular</button> <br>
+
+            <p class="titulo">Resultado</p>
+            <select id="moeda2" class="select">
+                <option value="dolar">Dolár</option>
+                <option value="real">Real</option>
+                <option value="euro">Euro</option>
+                <option value="peso">Peso</option>
+            </select>
+            <input type="text" id="resultado" class="css-input baixo" readonly>
+
+            <p class="inspiration">by Inspiration 2021</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
